@@ -1,12 +1,19 @@
-import styles from './large.module.scss';
 
-/* eslint-disable-next-line */
-export interface LargeProps {}
+import * as LargeMock from './mock-10';
 
-export function Large(props: LargeProps) {
+export function Large() {
+  const mocks = Object.values(LargeMock)
   return (
-    <div className={styles['container']}>
+    <div>
       <h1>Welcome to Large!</h1>
+      <p>from  Array *. Length: {mocks.length}</p>
+      <ul>
+        {mocks.map((Mock, index) => (
+          <li key={index}>
+            <Mock />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

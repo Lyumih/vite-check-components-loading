@@ -6,6 +6,7 @@ import NxWelcome from './nx-welcome';
 import {Ui} from 'ui/src';
 
 import { Route, Routes, Link } from 'react-router-dom';
+import { MyLib2, MyLib2Second } from '@milis/my-lib-2';
 
 export function App() {
   return (
@@ -29,6 +30,8 @@ export function App() {
         </ul>
       </div>
       <Ui />
+      <MyLib2 />
+      <MyLib2Second />
       <Routes>
         <Route
           path="/"

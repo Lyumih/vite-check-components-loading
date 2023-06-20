@@ -2,6 +2,7 @@
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import viteTsConfigPaths from 'vite-tsconfig-paths';
+import mkcert from'vite-plugin-mkcert'
 
 export default defineConfig(({command, mode}) => {
   console.log(command, mode)
@@ -14,7 +15,13 @@ export default defineConfig(({command, mode}) => {
       'process.env': env
     },
 
+
+    optimizeDeps: {
+      // include: ['../my-lib-2']
+    },
+
     server: {
+      https: true,
       port: 4200,
       host: 'localhost',
     },
@@ -29,6 +36,7 @@ export default defineConfig(({command, mode}) => {
       viteTsConfigPaths({
         root: '../',
       }),
+      mkcert(),
     ],
 
     // Uncomment this if you are using workers.

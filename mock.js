@@ -6,6 +6,7 @@ const PATH_MOCK_FILE_INDEX = path.join(MOCK_DIR, 'index.tsx')
 const MOCK_ITEMS_DIR = path.join(MOCK_DIR, 'item')
 
 const LENGTH_FILE_IMPORTS = +process.argv.slice(2)[0];
+const IS_CLEAN = Boolean(process.argv.slice(2)[1])
 
 if (!LENGTH_FILE_IMPORTS) {
   console.warn('Please add number of needed files in argument script')
@@ -48,5 +49,9 @@ const updateIndexFile = () => {
   })
 }
 
+
+if (IS_CLEAN) {
+  fs.rmSync(MOCK_ITEMS_DIR, { recursive: true, force: true })
+}
 generateMockItems();
 updateIndexFile()

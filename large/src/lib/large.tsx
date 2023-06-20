@@ -1,4 +1,3 @@
-
 import * as LargeMock from './mock';
 
 export function Large() {

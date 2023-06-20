@@ -1,1 +1,0 @@
-export const LargeMock02 = () => <div>Large Mock 02</div>

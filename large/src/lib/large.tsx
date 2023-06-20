@@ -1,5 +1,5 @@
 
-import * as LargeMock from './mock-10';
+import * as LargeMock from './mock';
 
 export function Large() {
   const mocks = Object.values(LargeMock)

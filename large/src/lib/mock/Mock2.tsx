@@ -1,0 +1,1 @@
+export const Mock2 = () => <div>Mock2</div>

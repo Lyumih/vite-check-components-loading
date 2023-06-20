@@ -5,7 +5,7 @@ const MOCK_DIR = './large/src/lib/mock'
 const PATH_MOCK_FILE_INDEX = path.join(MOCK_DIR, 'index.tsx')
 const MOCK_ITEMS_DIR = path.join(MOCK_DIR, 'item')
 
-const LENGTH_FILE_IMPORTS = process.argv.slice(2)[0] || 0;
+const LENGTH_FILE_IMPORTS = +process.argv.slice(2)[0] || 1;
 
 
 console.log('Mock', LENGTH_FILE_IMPORTS, PATH_MOCK_FILE_INDEX)

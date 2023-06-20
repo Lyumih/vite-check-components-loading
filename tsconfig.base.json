@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@milis/large": ["large/src/index.ts"],
       "@milis/my-lib": ["my-lib/src/index.ts"],
       "@milis/my-lib-2": ["my-lib-2/src/index.ts"],
       "@milis/ui": ["ui/src/index.ts"]

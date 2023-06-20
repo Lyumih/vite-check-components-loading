@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx run real:serve:development",
+    "start": "yarn serve",
+    "serve": "nx run real:serve:development",
     "mock": "node mock.js"
   },
   "private": true,

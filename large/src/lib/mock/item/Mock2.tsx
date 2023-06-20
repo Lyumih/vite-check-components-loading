@@ -1,3 +1,3 @@
-import { Mock, IMock } from '../../Mock';
+import { MockItem, IMockItem } from '../../MockItem';
 
-export const Mock2 = (props: IMock) => <Mock index={props.index} />
+export const Mock2 = (props: IMockItem) => <MockItem index={props.index} />

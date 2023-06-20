@@ -15,11 +15,14 @@ if (!LENGTH_FILE_IMPORTS) {
 console.log('Mock', LENGTH_FILE_IMPORTS, PATH_MOCK_FILE_INDEX)
 
 const generateMockItems = () => {
+  if (!fs.existsSync(MOCK_ITEMS_DIR)) fs.mkdirSync(MOCK_ITEMS_DIR)
   const items = fs.readdirSync(MOCK_ITEMS_DIR)
   console.log(items)
   for (let i = items.length; i < LENGTH_FILE_IMPORTS; i++) {
-    const fileName = `Mock${i}.tsx`
-    const content = `import { MockItem, IMockItem } from '../../MockItem';\nexport const Mock${i} = (props: IMockItem) => <MockItem index={props.index} />`
+    const count = i.toString().padStart(5, 0)
+    console.log(count)
+    const fileName = `Mock${count}.tsx`
+    const content = `import { MockItem, IMockItem } from '../../MockItem';\nexport const Mock${count} = (props: IMockItem) => <MockItem index='${count}' />`
     fs.writeFile(path.join(MOCK_ITEMS_DIR, fileName), content, err => {
       console.log(`Generated ${fileName}`)
     })

@@ -10,7 +10,7 @@ export function Large() {
       <ul>
         {mocks.map((Mock, index) => (
           <li key={index}>
-            <Mock />
+            {index}. <Mock index={index} />
           </li>
         ))}
       </ul>

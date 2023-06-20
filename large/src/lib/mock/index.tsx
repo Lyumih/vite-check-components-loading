@@ -1,2 +1,2 @@
-export * from './Mock1'
-export * from './Mock2'
+export * from './item/Mock1'
+export * from './item/Mock2'

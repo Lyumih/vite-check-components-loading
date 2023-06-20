@@ -28,6 +28,8 @@ const generateMockItems = () => {
       console.log(`Generated ${fileName}`)
     })
   }
+  updateIndexFile()
+
 }
 
 const generateIndexFileContent = () => {
@@ -54,4 +56,3 @@ if (IS_CLEAN) {
   fs.rmSync(MOCK_ITEMS_DIR, { recursive: true, force: true })
 }
 generateMockItems();
-updateIndexFile()

@@ -3,7 +3,7 @@
 
 1. `yarn`
 2. `yarn serve`
-3. `yarn gen N`, where N - count of components
+3. `yarn mock N`, where N - count of components. `yarn mock 5000`
 4. Open Google Chrome Network - freeze google chrome.
 
 Problems:

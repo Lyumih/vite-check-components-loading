@@ -1,4 +1,5 @@
 # Vite Chrome Network loading components
+[Issies Vite](https://github.com/vitejs/vite/issues/13570)
 
 1. `yarn`
 2. `yarn serve`
